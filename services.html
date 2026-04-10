@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body style="background:#e3f2fd; height:100vh; display:flex; justify-content:center; align-items:center;">
+
+<div class="card p-4 shadow" style="width:420px; border-radius:15px;">
+
+    <h3 class="text-center">Select Options</h3>
+
+    <form method="POST">
+
+        {% if event == "College Fest" %}
+        <label>Select Activities</label>
+        <select name="sub_event" class="form-select mb-3">
+            <option>Flash Mob</option>
+            <option>Banner Reveal</option>
+            <option>Performances</option>
+            <option>DJ Night</option>
+        </select>
+        {% endif %}
+
+        {% if event == "Marriage" %}
+        <label>Select Function</label>
+        <select name="sub_event" class="form-select mb-3">
+            <option>Haldi</option>
+            <option>Mehndi</option>
+            <option>Sangeeth</option>
+            <option>Reception</option>
+        </select>
+        {% endif %}
+
+        {% if event == "Birthday" %}
+        <label>Select Type</label>
+        <select name="sub_event" class="form-select mb-3">
+            <option>Pre Birthday Shoot</option>
+            <option>Decoration</option>
+            <option>Photoshoot</option>
+            <option>Cake Ideas</option>
+        </select>
+        {% endif %}
+
+        <label>Select Services</label>
+        <select name="services" class="form-select mb-3" multiple>
+            <option>Food</option>
+            <option>Drinks</option>
+            <option>Return Gifts</option>
+            <option>Invitation Cards</option>
+        </select>
+
+        <button class="btn btn-success w-100">Next</button>
+    </form>
+
+</div>
+
+</body>
+</html>
